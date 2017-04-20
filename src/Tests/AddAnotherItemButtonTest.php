@@ -50,28 +50,28 @@ class AddAnotherItemButtonTest extends FieldTestBase {
   protected function setUp() {
     parent::setUp();
 
-    $web_user = $this->drupalCreateUser(array('view test entity', 'administer entity_test content'));
+    $web_user = $this->drupalCreateUser(['view test entity', 'administer entity_test content']);
     $this->drupalLogin($web_user);
 
     $this->entityTypeManager = $this->container->get('entity_type.manager');
 
-    $this->fieldStorageUnlimited = array(
+    $this->fieldStorageUnlimited = [
       'field_name' => 'field_unlimited',
       'entity_type' => 'entity_test',
       'type' => 'test_field',
       'cardinality' => FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED,
-    );
+    ];
 
-    $this->field = array(
+    $this->field = [
       'entity_type' => 'entity_test',
       'bundle' => 'entity_test',
       'label' => $this->randomMachineName() . '_label',
       'description' => '[site:name]_description',
       'weight' => mt_rand(0, 127),
-      'settings' => array(
+      'settings' => [
         'test_field_setting' => $this->randomMachineName(),
-      ),
-    );
+      ],
+    ];
   }
 
   /**
