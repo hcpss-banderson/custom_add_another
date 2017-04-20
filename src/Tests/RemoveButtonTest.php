@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\custom_add_another\Tests\RemoveButtonTest.
- */
-
 namespace Drupal\custom_add_another\Tests;
 
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
